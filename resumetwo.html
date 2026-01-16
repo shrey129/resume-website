@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreya Gautam - Resume Website</title>
+
+    <style>
+        /* COLOR VARIABLES */
+        :root {
+            --bg-light: #f8f3ed;
+            --bg-dark: #2e1a1a;
+            --text-light: #2b2b2b;
+            --text-dark: #f5e9d8;
+            --accent: #b28a50;
+            --burgundy: #9e1a2c;
+            --card-light: #fffdf9;
+            --card-dark: #3a2626;
+            --name-light: #9e1a2c;
+            --name-dark: #f5e9d8;
+        }
+
+        /* GLOBAL STYLES */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            transition: 0.4s ease;
+        }
+
+        /* PARALLAX HEADER */
+        .parallax-bg {
+            background-image: url('reumeshreya.jpeg'); /* Replace with your image */
+            height: 350px;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            filter: brightness(0.6);
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5ddd2;
+            transition: 0.4s ease;
+        }
+        nav.dark {
+            background: rgba(0, 0, 0, 0.35);
+            border-color: #4a3737;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+        nav.dark ul li a {
+            color: var(--text-dark);
+        }
+        nav ul li a:hover {
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: -150px;
+        }
+        .profile-pic {
+            width: 210px;
+            height: 225px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin: 0 auto 20px;
+            background-size: cover;
+            background-position: top center;
+        }
+        header h1 {
+            font-size: 46px;
+            letter-spacing: 2px;
+            color: var(--name-light);
+            animation: fadeIn 1.5s ease both;
+        }
+        .signature {
+            font-family: "Lucida Handwriting", cursive;
+            font-size: 26px;
+            margin-top: 10px;
+            color: var(--accent);
+            animation: fadeIn 2.2s ease both;
+        }
+
+        p {
+            animation: fadeIn 2s ease both;
+        }
+
+        /* SECTIONS */
+        .section {
+            max-width: 900px;
+            margin: 60px auto;
+            background: var(--card-light);
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            transition: 0.4s ease;
+            animation: fadeIn 1.2s ease both;
+        }
+        .section.dark {
+            background: var(--card-dark);
+            color: var(--text-dark);
+            box-shadow: 0 0 20px rgba(255,255,255,0.08);
+        }
+        h2 {
+            border-left: 5px solid var(--accent);
+            padding-left: 12px;
+            font-size: 26px;
+        }
+
+        /* DOWNLOAD BUTTON */
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            background: var(--burgundy);
+            color: white;
+            margin-top: 60px;
+        }
+        .icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .icons img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(1);
+            transition: 0.3s ease;
+        }
+        .icons img:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 6px var(--accent));
+        }
+
+        /* DARK MODE TOGGLE BUTTON */
+        #toggleDark {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: var(--accent);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* FADE-IN ANIMATION */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);} 
+            to {opacity: 1; transform: translateY(0);} 
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="friends.html">Friends</a></li>
+        </ul>
+    </nav>
+
+    <!-- PARALLAX HEADER -->
+    <div class="parallax-bg"></div>
+
+    <!-- HEADER -->
+    <header id="home">
+        <div class="profile-pic" style="background-image: url('profile.jpeg');"></div>
+        <h1>Shreya Gautam</h1>
+        <div class="signature">— S. Gautam</div>
+        <p>Data & AI Enthusiast · Analyst · Problem Solver</p>
+        <a class="download-btn" href="resume.pdf" download>Download Resume</a>
+    </header>
+
+    <!-- ABOUT -->
+    <div class="section" id="About">
+        <h2>About</h2>
+        <ul>
+            <li><strong>Data and AI enthusiast </strong> </li>
+            <li>Passionate about uncovering patterns, solving problems, and making sense of complexity with clarity and logic, a hands-on mindset and interest in building practical, user-friendly solutions.</li>
+            <li>Self-driven learner with a quiet determination to turn curiosity into impact.</li>
+        </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section" id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech CSE</strong> – Rustamji Institute of Technology | GPA: 8.27</li>
+            <li>Intermediate (CBSE) – 80.6%</li>
+            <li>High School (CBSE) – 90.4%</li>
+        </ul>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, C++</li>
+            <li>NumPy, Pandas, Matplotlib</li>
+            <li>Web Scraping</li>
+            <li>MS Excel</li>
+            <li>Canva</li>
+            <li>Eloquent English speaker with professional proficiency</li>
+            <li>Elementary proficiency in German</li>
+            <li>Patient listener</li>
+        </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Sales analysis on Google Colab using Pandas</li>
+            <li>ML model predicting student performance</li>
+            <li>Python GIF generator</li>
+        </ul>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section" id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Hindustani Classical Music (4-year degree)</li>
+            <li>German A1 — NPTEL</li>
+            <li>AWS Data Center Technician Certificate</li>
+            <li>IBM DA & GenAI Certificates</li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Connect with me</p>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/shreya-gautam-932b54290/" target="_blank">
+                <img src="linkedin.jpg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/shrey129" target="_blank">
+                <img src="git.png" alt="GitHub" />
+            </a>
+            <a href="mailto:shreya.sg027@gmail.com">
+                <img src="mail.png" alt="Email" />
+            </a>
+        </div>
+    </footer>
+
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <button id="toggleDark">Night Mode</button>
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        const btn = document.getElementById('toggleDark');
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('.section');
+
+        btn.onclick = () => {
+            document.body.classList.toggle('dark');
+
+            if(document.body.classList.contains('dark')){
+                document.body.style.background = 'var(--bg-dark)';
+                document.body.style.color = 'var(--text-dark)';
+                navbar.classList.add('dark');
+                sections.forEach(s => s.classList.add('dark'));
+                btn.innerText = "Light Mode";
+
+                document.querySelector('header h1').style.color = 'var(--name-dark)';
+                document.querySelector('.signature').style.color = 'var(--accent)';
+
+                // Footer icons brightness for dark mode
+                document.querySelectorAll('.icons img').forEach(icon => {
+                    icon.style.filter = 'brightness(1.2)';
+                });
+
+            } else {
+                document.body.style.background = 'var(--bg-light)';
+                document.body.style.color = 'var(--text-light)';
+                navbar.classList.remove('dark');
+                sections.forEach(s => s.classList.remove('dark'));
+                btn.innerText = "Night Mode";
+
+                document.querySelector('header h1').style.color = 'var(--name-light)';
+                document.querySelector('.signature').style.color = 'var(--accent)';
+
+                // Footer icons brightness for light mode
+                document.querySelectorAll('.icons img').forEach(icon => {
+                    icon.style.filter = 'brightness(1)';
+                });
+            }
+        }
+    </script>
+</body>
+</html>

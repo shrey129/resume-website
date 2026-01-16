@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Shreya Gautam</title>
+
+    <style>
+        :root {
+            --burgundy: #6A0F1A;
+            --gold: #edd06e;
+            --black: #000000;
+            --beige: #F5F0E6;
+            --white: #ffffff;
+            --accent: #60501a; /* hover/glow */
+
+            --bg-dark: #1a1a1a;
+            --text-dark: #f5e9d8;
+            --name-dark: #edd06e; /* Header title color in dark mode */
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Georgia", serif;
+            background: var(--beige);
+            color: var(--black);
+        }
+
+        /* HEADER */
+        header {
+            background: var(--burgundy);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        /* CARD STYLE */
+        .edu-card {
+            background: var(--white);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--burgundy);
+            transition: 0.3s;
+            animation: fadeIn 0.6s ease;
+            position: relative;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        .edu-card h2 {
+            margin: 0;
+            color: var(--burgundy);
+            font-size: 28px;
+        }
+
+        .edu-card h3 {
+            margin: 8px 0 0 0;
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .edu-card p {
+            margin: 6px 0;
+            color: #333;
+        }
+        
+        body.dark {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+}
+
+    .edu-card.dark {
+        background: #2e1a1a;
+        color: var(--text-dark);
+        box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    }
+
+    header.dark {
+        color: var(--name-dark);
+    }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .highlight-burgundy {
+            color: var(--burgundy);
+            font-weight: 600;
+        }
+
+        .divider {
+            width: 150px;
+            height: 4px;
+            background: var(--gold);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            background: var(--burgundy);
+            color: white;
+            margin-top: 60px;
+        }
+
+        .icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icons img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(1);
+            transition: 0.3s ease;
+        }
+         .section.dark {
+            background: var(--card-dark);
+            color: var(--text-dark);
+            box-shadow: 0 0 20px rgba(255,255,255,0.08);
+        }
+        .icons img:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 6px var(--accent));
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);} 
+            to {opacity: 1; transform: translateY(0);} 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Achievements</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="edu-card">
+            <h2>Hindustani Classical Music</h2>
+            <h3>4-Year Degree</h3>
+            <p>Completed a 4-year degree in Hindustani classical music, enhancing discipline and creativity.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="edu-card">
+            <h2>German Language Certification</h2>
+            <h3>NPTEL A1 Certificate</h3>
+            <p>Successfully earned the German A1 Certificate from NPTEL, showcasing language learning proficiency.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="edu-card">
+            <h2>Music Competitions</h2>
+            <h3>Participant</h3>
+            <p>Participated in various music competitions to enhance performance skills and stage experience.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="edu-card">
+            <h2>AWS Data Center Technician</h2>
+            <h3>Certification</h3>
+            <p>Completed AWS Data Center Technician certification to gain practical cloud infrastructure knowledge.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="edu-card">
+            <h2>IBM Courses</h2>
+            <h3>Data Analyst & GenAI</h3>
+            <p>Completed IBM Data Analyst course and GenAI certification on Coursera to strengthen analytical and AI skills.</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>© 2025 Shreya Gautam | All Rights Reserved</p>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/shreya-gautam-932b54290/" target="_blank">
+                <img src="linkedin.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/shrey129" target="_blank">
+                <img src="git.png" alt="GitHub">
+            </a>
+            <a href="mailto:shreya.sg027@gmail.com">
+                <img src="mail.png" alt="Email">
+            </a>
+        </div>
+    </footer>
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <button id="toggleDark">Night Mode</button>
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        const btn = document.getElementById('toggleDark');
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('.section');
+
+        btn.onclick = () => {
+            document.body.classList.toggle('dark');
+
+            if(document.body.classList.contains('dark')){
+                document.body.style.background = 'var(--bg-dark)';
+                document.body.style.color = 'var(--text-dark)';
+                navbar.classList.add('dark');
+                sections.forEach(s => s.classList.add('dark'));
+                btn.innerText = "Light Mode";
+
+                document.querySelector('header h1').style.color = 'var(--name-dark)';
+                document.querySelector('.signature').style.color = 'var(--accent)';
+
+                // Footer icons brightness for dark mode
+                document.querySelectorAll('.icons img').forEach(icon => {
+                    icon.style.filter = 'brightness(1.2)';
+                });
+
+            } else {
+                document.body.style.background = 'var(--bg-light)';
+                document.body.style.color = 'var(--text-light)';
+                navbar.classList.remove('dark');
+                sections.forEach(s => s.classList.remove('dark'));
+                btn.innerText = "Night Mode";
+
+                document.querySelector('header h1').style.color = 'var(--name-light)';
+                document.querySelector('.signature').style.color = 'var(--accent)';
+
+                // Footer icons brightness for light mode
+                document.querySelectorAll('.icons img').forEach(icon => {
+                    icon.style.filter = 'brightness(1)';
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
